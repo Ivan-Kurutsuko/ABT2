@@ -4,18 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width-device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Copmatible" content="ie=edge">
-	<title>АБТ</title>
+	<title>АБК</title>
 	<link rel="stylesheet" href="slick/slick.css">
  	<link rel="stylesheet" href="slick/slick-theme.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="logo.png">
 
+	<link rel="stylesheet" href="css/animate.css">
 	<!-- fonts -->
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header class="header">
+	<header class="header wow delay-o.7s fadeInDownBig">
 			
 
 			<!-- Кнопка для всплывающего меню -->
@@ -23,7 +24,7 @@
 			<!-- всплывающее меню -->
 			<div class="modal-menu">
 				<div class="modal-menu-content">
-					<img src="img/logo.svg" alt="" class="modal-menu-logo">
+					<img src="img/logo2.svg" alt="" class="modal-menu-logo">
 					<div class="modal-menu-content-links">
 						<a href="index.html">Главная</a>
 						<a href="index.html#service" class="active">Услуги</a>
@@ -38,8 +39,8 @@
 			</div>
 				
 
-			<a href="index.html"><img src="img/logo.svg" alt="" class="logo"></a>
-			<p class="sity">г. Ижевск</p>
+			<a href="index.html"><img src="img/logo2.svg" alt="" class="logo"></a>
+			<p class="sity">г. Краснодар</p>
 			<div class="header-links">
 				<a href="index.html">Главная</a>
 				<a href="index.html#service" class="active">Услуги</a>
@@ -53,7 +54,7 @@
 	</header>
 
 
-	<main class="home-main">
+	<main class="home-main wow zoomIn">
 		<h1 class="home-main-title">Строительные работы</h1>
 		<p class="home-main-description">Все виды строительных работ - от сварки до столярных работ</p>
 	</main>
@@ -66,7 +67,7 @@
 			</h1>
 			<hr>
 		</div>
-		<div class="beneficts-content">
+		<div class="beneficts-content  wow delay-1s flipInX">
 			<div class="beneficts-card">
 				<h2>Качество</h2>
 				<p>Высокое качество <br>выполненных работ</p>
@@ -94,7 +95,7 @@
 			</h1>
 			<hr>
 		</div>
-		<div class="service-content">
+		<div class="service-content wow delay-1s zoomIn">
 			<div class="service-card">
 				<div class="card-image">
 					<img src="img/Строительные работы/Электромонтажные работы2.jpg" alt="">
@@ -154,22 +155,22 @@
 			</h1>
 			<hr>
 		</div>
-		<div class="examples-content">
+		<div class="examples-content  wow delay-1s fadeInLeft">
 			<div class="examples-slider">
 				<div class="examples-slide">
-					Galery
+					<img src="img/Для слайдера/СР-слайдер/IMG-20200421-WA0028.jpg" alt="">
 				</div>
 				<div class="examples-slide">
-					Galery
+					<img src="img/Для слайдера/СР-слайдер/IMG-20200421-WA0038.jpg" alt="">
 				</div>
 				<div class="examples-slide">
-					Galery
+					<img src="img/Для слайдера/СР-слайдер/IMG-20200421-WA0041.jpg" alt="">
 				</div>
 				<div class="examples-slide">
-					Galery
+					<img src="img/Для слайдера/СР-слайдер/IMG-20200421-WA0049.jpg" alt="">
 				</div>
 				<div class="examples-slide">
-					Galery
+					<img src="img/Для слайдера/СР-слайдер/IMG-20200421-WA0072.jpg" alt="">
 				</div>
 			</div>
 		</div>
@@ -183,7 +184,7 @@
 			</h1>
 			<hr>
 		</div>
-		<div class="contacts-content">
+		<div class="contacts-content  wow delay-1s fadeInUp">
 			<div class="contacts-left">
 				<h1>Адрес</h1>
 				<p>г. Тюмень, ул. Мельни- <br>кайте, д.136 кор.1.</p>
@@ -198,9 +199,9 @@
 				<a href="http://etl72.ru">http://etl72.ru</a>
 			</div>
 			<div class="contacts-right">
-				<form action="#">
-					<input type="text" placeholder="Имя">
-					<input id="phone" type="text" placeholder="+ 7 (999) 999-99-99">
+				<form action="mailer/smart.php" method="POST">
+					<input name="user_name" type="text" placeholder="Имя">
+					<input name="user_phone" id="phone" type="text" placeholder="+ 7 (999) 999-99-99">
 					<button>Отправить</button>
 				</form>
 			</div>
@@ -210,7 +211,7 @@
 
 	<footer class="footer">
 		<p>Сайт разработан <br> агенством <a href="#">GoodMa</a></p>
-		<img src="img/logo.svg" alt="" class="footer-logo">
+		<img src="img/logo2.svg" alt="" class="footer-logo">
 		<p>Все права защищены <br> 2019-2020</p>
 	</footer>
 
@@ -218,6 +219,10 @@
 	<script src="js/jquery-3.4.1.js"></script>
 	<script src="slick/slick.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 	 <script>
 		$(document).ready(function(){
 		  $('.examples-slider').slick({ //слайдер с отзывами
