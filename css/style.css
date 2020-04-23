@@ -1,11 +1,14 @@
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
   -webkit-box-shadow: inset 0  0 50px #777;
   box-shadow: inset 0  0 50px #777;
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: -webkit-gradient(linear, left bottom, left top, from(#111111), color-stop(#222222), color-stop(#333333), color-stop(#444444), color-stop(#555555), color-stop(#444444), color-stop(#333333), color-stop(#222222), to(#111111));
+  background: linear-gradient(to top, #111111, #222222, #333333, #444444, #555555, #444444, #333333, #222222, #111111);
   border-radius: 3px;
+  border-left: 1px solid #777;
+  border-right: 1px solid #777;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #444;
@@ -75,11 +78,11 @@
           transform: translateX(-50%);
 }
 body {
-  background-color: #111;
-  background: url(../img/background-home.png);
+  background: url(../img/HPBG22.png);
   background-repeat: repeat;
-  background-position: top center;
+  background-position: top left;
   font-family: 'Roboto', sans-serif;
+  z-index: 100099;
   color: #fff;
 }
 .header {
@@ -154,6 +157,51 @@ body {
 .header .button:active {
   color: #000;
   font-weight: 200;
+}
+.thanks-content {
+  text-align: center;
+  margin-top: 50px;
+}
+.thanks-content img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+.thanks-content h2 {
+  font-weight: 500;
+  font-size: 30px;
+}
+.thanks-content p {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 75px;
+}
+.thanks-content a {
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.thanks-content a span {
+  font-size: 26px;
+  margin-right: 10px;
+}
+.thanks-content a:hover span {
+  margin-right: 4px;
+  margin-left: 7px;
+}
+.thanks-content a:hover {
+  font-weight: 600;
+  color: #121212;
+  background-color: #f9f9f9;
+}
+.thanks-content a:active span {
+  margin-left: 0;
+  margin-right: 10px;
 }
 .home-main {
   text-align: center;
@@ -354,6 +402,7 @@ body {
   margin-top: 50px;
   width: 60%;
   margin: auto;
+  z-index: 99 !important;
 }
 .about-content h1 {
   font-style: normal;
@@ -380,6 +429,7 @@ body {
   color: rgba(50, 50, 50, 0.4);
   text-transform: uppercase;
   letter-spacing: 15px;
+  z-index: -1 !important;
 }
 .examples {
   margin-bottom: 125px;
@@ -420,19 +470,26 @@ body {
 .examples-slider {
   margin: auto;
   margin-top: 100px;
-  width: 100%;
-  height: 270px;
+  width: 85%;
+  height: 300px;
 }
 .examples-slider .examples-slide {
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-color: #777;
-  height: 250px;
+  background-color: transparent;
+  height: 300px;
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
-  max-width: 97%;
+  width: auto;
+  max-width: 75%;
+}
+.examples-slider .examples-slide img {
+  margin: auto;
+  width: auto;
+  height: 100%;
+  border-radius: 15px;
 }
 .slick-prev {
   margin-left: -20px;
@@ -766,6 +823,27 @@ body {
   .about .back {
     display: none;
   }
+  .examples-slider {
+    margin: auto;
+    margin-top: 100px;
+    width: 100%;
+    height: 275px;
+  }
+  .examples-slider .examples-slide {
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-color: #777;
+    height: 275px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 97%;
+  }
+  .examples-slider .examples-slide img {
+    width: 100%;
+    height: 100%;
+  }
   .contacts-content {
     width: 60%;
   }
@@ -907,6 +985,27 @@ body {
   .about-content p {
     font-size: 16px;
     width: 90%;
+  }
+  .examples-slider {
+    margin: auto;
+    margin-top: 100px;
+    width: 100%;
+    height: 190px;
+  }
+  .examples-slider .examples-slide {
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-color: #777;
+    height: 190px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 97%;
+  }
+  .examples-slider .examples-slide img {
+    width: 100%;
+    height: 100%;
   }
   .contacts-content {
     padding-top: 50px;
